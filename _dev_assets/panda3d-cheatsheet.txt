@@ -1,0 +1,27 @@
+
+# cmd prompt
+multify -c -f assets.mf -v egg bgm sfx
+
+#read
+multify -tvf models.mf
+
+#In the game, from the multifile models.mf, load the .ttf file.
+#panda3d
+font = loader.loadFont("models/arial.ttf")
+
+##############################################################
+
+GAME PROPERTY
+# INVISIBLE
+Collide String Polyset descend
+# VISIBLE
+Collide String Polyset keep descend
+
+##############################################################
+
+before running program, call:
+> pstats
+to profile execution
+
+# build apps needs requirements.txt
+python setup.py build_apps
